@@ -1,5 +1,151 @@
-*{
-    margin: 0;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+* {
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
+}
+
+:root {
+    --primary-text: 'Inter', sans-serif;
+    --secondary-text: 'Lexend Deca', sans-serif;
+    --accent-color: #AB5CDB;
+    --main-bg: #0A0C1C;
+    --card-bg: #1B1937;
+}
+
+body {
+    font-size: .94rem;
+    font-family: var(--primary-text);
+}
+
+main {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-bg);
+    padding: 5rem 0;
+}
+
+.card {
+    max-width: 21.8rem;
+    background-color: var(--card-bg);
+    border-radius: .4rem;
+}
+
+.card-image {
+    position: relative;
+    border-radius: .5rem .5rem 0 0;
+}
+
+.card-image img {
+    width: 100%;
+    display: block;
+    border-radius: .5rem .5rem 0 0;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--accent-color);
+    opacity: .75;
+    border-radius: .5rem .5rem 0 0;
+}
+
+.card-content {
+    padding: 0 2rem;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.card-content h1 {
+    font-weight: 700;
+    font-size: 1.9rem;
+    margin-top: 2.75rem;
+}
+
+.tagged-word {
+    color: var(--accent-color);
+}
+
+#tag-line {
+    color: hsla(0, 0%, 100%, 0.5);
+    padding: 0 .4rem;
+    line-height: 1.6;
+    margin-top: 1rem;
+}
+
+.stats {
+    margin-top: 2.75rem;
+}
+
+.stat-slice {
+    margin-bottom: 2rem;
+}
+
+.stat-slice h2 {
+    margin-bottom: .5rem;
+}
+
+.stat-slice p {
+    font-family: var(--secondary-text);
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: hsla(0, 0%, 100%, 0.6);
+    text-transform: uppercase;
+    font-size: .8rem;
+}
+
+@media (min-width: 1025px) {
+
+    .card {
+        display: flex;
+        flex-direction: row-reverse;
+        max-width: 69.375rem;
+    }
+
+    .card-image,
+    .card-content {
+        width: 50%;
+    }
+
+    .card-image,
+    .card-image img,
+    .overlay {
+        border-radius: 0 .5rem .5rem 0;
+    }
+
+
+
+    .card-content {
+        text-align: left;
+        padding: 4rem;
+    }
+
+    .card-content h1 {
+        margin-top: 0;
+        font-size: 2.25rem;
+        margin-bottom: 1.5rem;
+    }
+
+    #tag-line {
+        padding: 0;
+        padding-right: 5rem;
+        margin-bottom: 5rem;
+    }
+
+    .stats {
+        display: flex;
+        /* flex-basis: 6rem; */
+    }
+
+    .stat-slice {
+        margin-bottom: 0;
+        margin-right: 3rem;
+    }
 }
